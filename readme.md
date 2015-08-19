@@ -1,6 +1,6 @@
 ##  A custom directive for currency input box masking.
-The directive consists of an addon with a '$' sign to the left of the input.
-If the input is disabled, it creates a badge icon with the amount
+* The directive consists of an addon with a '$' sign to the left of the input.
+* Creates a badge icon when the input is disabled
 
 ### Usage
 * Reference the script in your HTML
