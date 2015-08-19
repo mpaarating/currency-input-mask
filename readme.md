@@ -6,7 +6,7 @@
 * Reference the script in your HTML
 * Add `currencyInputMask` as a dependency in your app.
 ```javascript
-var app = angular.module('demo', ['currencyInputMask']);
+angular.module('demo', ['currencyInputMask']);
 ```
 * Add the `currency-mask` attribute to your text input.
 1. As a block element
