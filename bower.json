@@ -1,13 +1,8 @@
 {
   "name": "currency-input-mask",
   "description": "Provides right to left masking for currency input fields",
-  "version": "0.1.0-alpha",
+  "version": "0.1.0",
   "main": ["currency-input-mask.directive.js"],
-  "ignore": [
-    ".gitignore",
-    "demo.html",
-    "README.md"
-  ],
   "dependencies": {
     "angular": ">=1.1.5 <2.0.0",
     "lodash": ">=3.1.0",
@@ -21,5 +16,15 @@
   ],
   "authors": [
     "Alex Lewis <alexmlewis.com> (http://alexmlewis.com/)"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mpaarating/currency-input-mask.git"
+  },
+  "license": "MIT",
+  "ignore": [
+    ".gitignore",
+    "demo.html",
+    "README.md"
   ]
 }

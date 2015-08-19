@@ -9,6 +9,7 @@
  *      inline:                { Boolean } // if the currency input is used inline
  *      required:              { Boolean } // add the HTML required attribute
  *      disabled:              { Boolean } // disable the input and hide the input group addon
+ *      colored-money-val:     { Boolean } // uses classes to color the money input values (green for pos, red for neg).
  *      ng-model:              // the model
  *      ng-class:
  *      ng-trim:               { Boolean }
@@ -18,12 +19,12 @@
  *  ////////////////////////////////////////////////////
  *  Example usages:
  *     1. As a block element
- *          <ngc-currency-input id="some-id"
-                                ngc-secure-field="Contract.requestedFinancedAmount"
+ *          <currency-input-mask id="some-id"
+
                                 ng-model="exampleModel"
                                 required="true">
                 <!-- ANY TRANSCLUDED STUFF GOES HERE -->
-            </ngc-currency-input>
+            </currency-input-mask>
 
         2. As an inline element
             <ngc-currency-input id="amount-being-paid-input"
