@@ -1,7 +1,7 @@
 {
   "name": "currency-input-mask",
-  "description": "Provides right to left masking for currency input fields",
-  "version": "0.1.0",
+  "description": "A custom directive for currency input box masking",
+  "version": "1.0.0",
   "main": ["currency-input-mask.directive.js"],
   "dependencies": {
     "angular": ">=1.1.5 <2.0.0",
