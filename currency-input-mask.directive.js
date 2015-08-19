@@ -1,42 +1,3 @@
-/**
- * CurrencyInputMask -- A custom directive for currency input box.
- *                     The directive consists of an addon with a '$'
- *                     sign to the left of the input.
- *
- *   ////////////////////////////////////////////////////
- *   Available options for the directive are:
- *      id:                    // the id for the input
- *      inline:                { Boolean } // if the currency input is used inline
- *      required:              { Boolean } // add the HTML required attribute
- *      disabled:              { Boolean } // disable the input and hide the input group addon
- *      colored-money-val:     { Boolean } // uses classes to color the money input values (green for pos, red for neg).
- *      ng-model:              // the model
- *      ng-class:
- *      ng-trim:               { Boolean }
- *      ng-disabled:
- *   ////////////////////////////////////////////////////
- *
- *  ////////////////////////////////////////////////////
- *  Example usages:
- *     1. As a block element
- *          <currency-input-mask id="some-id"
-
-                                ng-model="exampleModel"
-                                required="true">
-                <!-- ANY TRANSCLUDED STUFF GOES HERE -->
-            </currency-input-mask>
-
-        2. As an inline element
-            <ngc-currency-input id="amount-being-paid-input"
-                                ng-model="dataItem.amountBeingPaid"
-                                ng-disabled="!dataItem.isAmountBeingEdited"
-                                ng-trim="false"
-                                inline="true">
-                <!-- ANY TRANSCLUDED STUFF GOES HERE -->
-            </ngc-currency-input>
-    ////////////////////////////////////////////////////
- */
-
 (function() {
   'use strict';
 
@@ -52,7 +13,6 @@
       require: 'ngModel',
       scope: {
         id: '=',
-        inline: '=',
         required: '=',
         disabled: '=',
         coloredMoneyVal: '=',
@@ -102,14 +62,9 @@
 
         // we have to do this in the template function because
         // angular transclusion occurs when the template is constructed.
-        if (attrs.inline === 'true') {
-          // append the transcluded html after the input
-          input.after('<span ng-transclude></span>');
-        } else {
-          // append the transcluded html after the input-group
-          inputGroupDiv = template.find('.input-group');
-          inputGroupDiv.after('<span ng-transclude></span>');
-        }
+        // append the transcluded html after the input-group
+        inputGroupDiv = template.find('.input-group');
+        inputGroupDiv.after('<span ng-transclude></span>');
 
         return template[0].outerHTML;
       },
@@ -279,15 +234,7 @@
     }
 
     function buildInputAttrs(scope, element, attrs) {
-      // let the client implement the currency box inline
-      if (scope.inline) {
-        element.addClass('money-input pull-left');
-      }
-
-      // default is in block element
-      else {
-        element.addClass('form-control');
-      }
+      element.addClass('form-control');
 
       // add HTML required if applicable
       if (scope.required) {

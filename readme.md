@@ -2,6 +2,7 @@
 The directive consists of an addon with a '$' sign to the left of the input.
 If the input is disabled, it creates a badge icon with the amount
 
+### Usage
 * Reference the script in your HTML
 * Add `currencyInputMask` as a dependency in your app.
 ```javascript
@@ -19,12 +20,24 @@ var app = angular.module('demo', ['currencyInputMask']);
 ```
 2. As an inline element
 ```javascript
-<ngc-currency-input id="amount-being-paid-input"
-                    ng-model="dataItem.amountBeingPaid"
-                    ng-disabled="!dataItem.isAmountBeingEdited"
+<ngc-currency-input id="some-id"
+                    ng-model="exampleModel"
+                    ng-disabled="true"
                     ng-trim="false"
                     inline="true">
     <!-- ANY TRANSCLUDED STUFF GOES HERE -->
 </ngc-currency-input>
 ```
+### All Options for directive
+```
+id:                    // the id for the input
+required:              { Boolean } // add the HTML required attribute
+disabled:              { Boolean } // disable the input and hide the input group addon
+colored-money-val:     { Boolean } // uses classes to color the money input values (green for pos, red for neg).
+ng-model:
+ng-class:
+ng-trim:               { Boolean }
+ng-disabled:
+```
+
 **Note:** Bootstrap required for any css styling. Look at dependencies for further details
