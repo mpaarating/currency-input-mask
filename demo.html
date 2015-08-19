@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link data-require="bootstrap-css@*" data-semver="3.3.1" rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" />
+</head>
+
+<body ng-app="demo">
+    <div ng-controller="controller">
+        <pre>{{dolla}}</pre>
+        <currency-input-mask
+          colored-money-val="true"
+          ng-model="dollaDollaBill">
+        </currency-input-mask>
+        <br>
+        <br>
+        <strong>Unformatted Amount:</strong> {{dollaDollaBill}}
+        <br>
+        <br>
+        <strong>Currency Filtered Amount:</strong> {{dollaDollaBill | currency}}
+    </div>
+    <script data-require="angular.js@1.3.17" data-semver="1.3.17" src="https://code.angularjs.org/1.3.17/angular.js"></script>
+    <script data-require="lodash.js@*" data-semver="3.10.0" src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.0/lodash.js"></script>
+    <script src="currency-input-mask.directive.js"></script>
+    <script>
+    angular.module('demo', ['currencyInputMask'])
+        .controller('controller', ['$scope', function($scope) {
+            $scope.dollaDollaBill = '23.23';
+        }]);
+    </script>
+</body>
+
+</html>

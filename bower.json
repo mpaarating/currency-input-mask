@@ -1,0 +1,25 @@
+{
+  "name": "currency-input-mask",
+  "description": "Provides right to left masking for currency input fields",
+  "version": "0.1.0-alpha",
+  "main": ["currency-input-mask.directive.js"],
+  "ignore": [
+    ".gitignore",
+    "demo.html",
+    "README.md"
+  ],
+  "dependencies": {
+    "angular": ">=1.1.5 <2.0.0",
+    "lodash": ">=3.1.0",
+    "bootstrap": ">=3.0.0"
+  },
+  "devDependencies": {},
+  "keywords": [
+    "anguar",
+    "currency",
+    "input mask"
+  ],
+  "authors": [
+    "Alex Lewis <alexmlewis.com> (http://alexmlewis.com/)"
+  ]
+}
