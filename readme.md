@@ -20,13 +20,13 @@ angular.module('demo', ['currencyInputMask']);
 ```
 2. As an inline element
 ```javascript
-<ngc-currency-input id="some-id"
+<currency-input-mask id="some-id"
                     ng-model="exampleModel"
                     ng-disabled="true"
                     ng-trim="false"
                     inline="true">
     <!-- ANY TRANSCLUDED STUFF GOES HERE -->
-</ngc-currency-input>
+</currency-input-mask>
 ```
 ### All Options for directive
 ```
